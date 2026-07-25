@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Material Symbols configuration */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+/* MedicAI Glacier Design System Utilities */
+.glacier-gradient {
+    background: linear-gradient(135deg, #f9f9ff 0%, #e7eeff 100%);
+}
+
+.soft-shadow {
+    box-shadow: 0 4px 20px rgba(90, 107, 135, 0.08);
+}
+
+.floating-element {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* --- Safety box-sizing so padding doesn't create overflow --- */
+html, body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+*, *::before, *::after { box-sizing: inherit; }
+
+/* --- Prevent long words from overflowing --- */
+.break-words, .break-words * {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+/* --- Ensure images always fit their container --- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  overflow-x: hidden;
+}
